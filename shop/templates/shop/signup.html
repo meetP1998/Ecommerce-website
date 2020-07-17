@@ -1,0 +1,33 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} login page- MT Cart {% endblock %}
+{% block body %}
+
+<div>
+   <div class="col my-5 d-flex justify-content-center align-items-center">   
+        <form action="/shop/signup/" method="POST"> {% csrf_token %}
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="Firstname">Firstname</label>
+                    <input type="text" name="Firstname" placeholder="Firstname">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="Lastname">Lastname</label>
+                    <input type="text" class="form-control"  name="Lastname" placeholder="Lastname">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input type="password" name="Password" placeholder="Password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Sign-up</button>
+              </form>
+   </div>   
+</div>    
+
+{% endblock %}
